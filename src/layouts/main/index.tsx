@@ -15,6 +15,7 @@ const { Header, Content, Sider } = Layout
 const MainLayout: React.FC<RouteConfigComponentProps> = memo((props) => {
   const { route } = props
   const { menuConfig, userSetting, setUserSetting, userInfo, logout } = useGlobalStore()
+  console.log(menuConfig)
   const location = useLocation()
   // 根据pathname获取当前匹配到的路由配置、菜单配置、菜单展开的key
   const [matchedRouteConfig, matchedMenuConfig, matchedOpenKeys] = useMemo(() => {
@@ -55,7 +56,9 @@ const MainLayout: React.FC<RouteConfigComponentProps> = memo((props) => {
           {/* 面包屑 */}
           <AppBreadcrumb route={matchedRouteConfig!} />
           {/* 页面主体 */}
-          <Content className={styles.content}>{renderRoutes(route?.routes)}</Content>
+          <Content className={styles.content} id="frame">
+            {renderRoutes(route?.routes)}
+          </Content>
         </Layout>
       </Layout>
     </Layout>

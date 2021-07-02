@@ -1,2 +1,2 @@
-export const BASE_PATH = '/pitaya-admin'
+export const BASE_PATH = '/'
 export const LOGIN_PATH = '/login'

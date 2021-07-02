@@ -19,6 +19,7 @@
     "axios": "^0.21.1",
     "graphql": "^15.5.0",
     "lodash": "^4.17.21",
+    "qiankun": "^2.4.2",
     "querystring": "^0.2.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",

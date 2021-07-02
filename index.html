@@ -13,10 +13,10 @@
       if ('addEventListener' in document) {
         document.addEventListener(
           'DOMContentLoaded',
-          function() {
+          function () {
             FastClick.attach(document.body)
           },
-          false
+          false,
         )
       }
       if (!window.Promise) {
@@ -25,7 +25,7 @@
             '>' +
             '<' +
             '/' +
-            'script>'
+            'script>',
         )
       }
     </script>
@@ -34,5 +34,6 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script type="module" src="/src/main.tsx"></script>
     <div id="root"></div>
+    <div id="frame"></div>
   </body>
 </html>
